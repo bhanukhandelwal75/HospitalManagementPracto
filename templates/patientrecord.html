@@ -1,0 +1,26 @@
+<h1>patient record </h1>
+{% if d %}
+    {% for data in d %}
+
+
+
+
+    <h3>
+        <p>1)name:{{data[0]}}</p>
+    <p>2)mobno:{{data[1]}}</p>
+    <p>3)address:{{data[2]}}</p>
+    <p>4)email:{{data[3]}}</p>
+    <p>5)symptoms:{{data[4]}}</p>
+        <p>6)appointmentdate:{{data[5]}}</p>
+        <p>7)slot:{{data[6]}}</p>
+        <hr>
+
+
+    </h3>
+{% endfor %}
+{% elif ms %}
+<h3>{{ms}}</h3>
+
+
+
+{% endif %}

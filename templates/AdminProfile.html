@@ -1,0 +1,18 @@
+<HTML>
+<H1>
+    admin profile
+</H1>
+
+
+<form method="post" action="AdminProfile">
+<p>Name:<input type="text" name="T1" value="{{K{[0]}}" /></p>
+<P>Address:<input type="text" name="T2" value="{{K{[1]}}" /></P>
+<P>contact:<input type="text" name="T3" value="{{K{[2]}}"/></P>
+<P>email: {{k[3]}} </P>
+    <INPUT type="submit" name="B1" value="Save changes"></form>
+
+{% elif msg %}
+<h3>{{msg}}</h3>
+{% endif %}
+
+</HTML>

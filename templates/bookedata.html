@@ -1,0 +1,39 @@
+<h1> Data record for patient </h1>
+
+
+<form method="post" action="bookedata">
+    <p>Please enter date:</p>
+    <input type="date" name="T6" id="" required>
+    <p><input type="submit" name="B1" value="show appointments"/></p>
+    </form>
+
+<hr>
+{% if d %}
+    {% for data in d %}
+
+
+    <h3>
+        <p>1)name:{{data[1]}}</p>
+    <p>2)mobno:{{data[2]}}</p>
+    <p>3)address:{{data[3]}}</p>
+    <p>4)email:{{data[4]}}</p>
+    <p>5)symptoms:{{data[5]}}</p>
+        <p>6)appointmentdate:<font style="color:#C96;">{{data[6]}}</font></p>
+        <p>7)slot:<font style="color:#C00; font-size:20px;"> {{data[7]}} </font></p>
+        <p>8)docid:{{data[9]}}</p>
+
+
+
+<form method="post" action="showbill">
+    <input type="hidden" value="{{data[9]}}" name="H1" >
+    <input type="submit" name="P1" value="bill" id="sub"/>
+</form>
+
+<hr/>
+
+    </h3>
+{% endfor %}
+
+{% elif ms %}
+    <h3>{{ms}}</h3>
+{% endif %}

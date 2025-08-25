@@ -1,0 +1,30 @@
+<p>BILL OF PATIENT</p>
+{% if sata %}
+{% for i in sata %}
+
+<H1>APPOINTMENT ID: {{i[5]}} </H1>
+
+    <P>PATIENT'S NAME:{{i[6]}}</P>
+    <p>PATIENT'S E-mail:{{i[7]}}</p>
+    <p>Symptoms FOUND:{{i[8]}}</p>
+    <p>Mob-no:{{i[9]}}</p>
+
+<hr/>
+
+    <P>Doctor name:{{i[0]}}</P>
+    <P>Specialist:{{i[1]}}</P>
+    <P>Fees:{{i[2]}}</P>
+    <P>Address:{{i[3]}}</P>
+    <P>docid:{{i[4]}}</P>
+    <P>appid:{{i[5]}}</P>
+
+
+
+{% endfor %}
+
+{% elif ms %}
+<h2>{{ms}}</h2>
+
+{% endif %}
+
+

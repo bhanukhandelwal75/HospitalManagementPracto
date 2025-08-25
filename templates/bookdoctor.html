@@ -1,0 +1,62 @@
+
+
+<form method="post" action="bookdoctor">
+    <p>location <input type="text" name="T1" id="t1" placeholder="city" required /> </p>
+    <p>Speciality
+    <select name="A2">
+        <option>GENERAL PHYSICIAN</option>
+        <option>cardiaologist</option>
+        <option>Orthopedic</option>
+        <option>ENT specialist</option>
+        <option>Dentist</option>
+        <OPTION>Neurologist</OPTION>
+        <OPTION>Dermatologist</OPTION>
+    </select>
+  </p>
+    <input type="submit" name="B1" value="show doctors"/>
+    </form>
+
+
+
+
+
+<hr>
+{% if d %}
+    {% for data in d %}
+        <h2> <p><strong><u>Doctor name:{{data[0]}}</u></strong></p></h2>
+
+
+
+
+        <p>1)Specialist:{{data[1]}}</p>
+        <p>2)Sittinghours:{{data[2]}}</p>
+        <p>3)Venue:{{data[3]}}</p>
+        <p>4)Days:{{data[4]}}</p>
+        <p>5)E-mail:{{data[5]}}</p>
+            <p>6)fees:{{data[6]}}</p>
+        <p>7)Experience:{{data[7]}}</p>
+            <p>docid:{{data[9]}}</p>
+
+
+    </h3>
+
+ <form method="post" action="patientbook" >
+
+        <input type="hidden" name="L10" value="{{data[9]}}" />
+        <input type="submit" name="B1" value="Book" />
+    </form>
+
+
+
+
+
+
+
+
+<!--ab search1 ke liye alag se html file banegi aur search1 naam se python mai program likhenge-->
+{% endfor %}
+
+{% elif ms %}
+    <h3>{{ms}}</h3>
+{% endif %}
+

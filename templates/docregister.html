@@ -1,0 +1,16 @@
+<h2>doctor registrations</h2>
+<form method="post" action="docregister">
+<p>docname:<input type="text" name="A1" id="A1"></p>
+<p>qualifications:<input type="text" name="A2" id="A2"></p>
+<p>date:<input type="text" name="A3" id="A3"></p>
+<p>time:<input type="text" name="A4" id="A4"></p>
+<p>spec:<input type="text" name="A5" id="A5"></p>
+
+     <P><INPUT type="submit" ID="B1" NAME="B1" VALUE="register"/></p>
+</form>
+
+
+
+{% if ts %}
+<h2>{{ts}}</h2>
+{% endif %}

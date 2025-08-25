@@ -1,0 +1,27 @@
+
+
+<h1>DOCTOR DATA </h1>
+{% if d %}
+    {% for data in d %}
+<h2> <p><strong><u><p style="background-color:#C00;">Doctor name:{{data[0]}}</p></u></strong></p></h2>
+
+
+
+    <h3>
+        <p>1)Specialist:{{data[1]}}</p>
+    <p>2)Sitting hours:{{data[2]}}</p>
+    <p>3)Address:{{data[3]}}</p>
+    <p>4)Days:{{data[4]}}</p>
+    <p>5)E-mail:{{data[5]}}</p>
+        <p>6)fees:{{data[6]}]</p>
+    <p>7)Experience:{{data[7]}}</p>
+
+    </h3>
+{% endfor %}
+{% elif ms %}
+<h3>{{ms}}</h3>
+
+{% endif %}
+
+
+

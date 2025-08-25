@@ -1,0 +1,43 @@
+<h1>adminstrator</h1>
+{% if kota %}
+    <p>{{kota}}</p>
+    <table border="2" width="400" bgcolor="#FFFFCC">
+        <tr>
+            <td>1)shopname:</td>
+            <td>2)address:</td>
+            <td>3)place:</td>
+            <td>4)ownername:</td>
+            <td>5)email:</td>
+            <td>6)Time</td>
+            <td>7)licno</td>
+        </tr>
+    {% for d in kota %}
+
+<tr>
+
+
+            <td><strong> 1) <u>{{d[0]}}</u></strong></td>
+
+
+            <td>2){{d[1]}}</td>
+
+
+            <td>3){{d[2]}}</td>
+
+
+            <td>{{d[3]}}</td>
+
+
+            <td>{{d[4]}}</td>
+            <td>{{d[5]}}</td>
+            <td>{{d[6]}}</td>
+
+
+</tr>
+
+
+    {% endfor %}
+    </table>
+{% elif bundi %}
+    <h2>{{bundi}}</h2>
+{% endif %}

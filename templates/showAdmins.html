@@ -1,0 +1,18 @@
+<h1>adminstrator</h1>
+{% if kota %}
+    <p>{{kota}}</p>
+    {% for d in kota %}
+        <h3>{{d[0]}}</h3>
+
+        <p>
+            name:{{d[1]}}<br/>
+            address:{{d[2]}}<br/>
+            contact:{{d[3]}}<br/>
+            email:{{d[4]}}
+        </p>
+
+    {% endfor %}
+{% elif bundi %}
+    <h2>{{bundi}}</h2>
+{% endif %}
+

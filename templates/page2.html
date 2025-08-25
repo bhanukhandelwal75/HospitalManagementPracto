@@ -1,0 +1,62 @@
+<h1>Patient booking details</h1>
+<form action="page2" method="post" target="_blank" name="PT">
+
+    <p>  <strong>1)NAME:</strong><input type="text" name="T1" id="t1" required /> </p>
+    <p>  <strong>2)MOBNO:</strong><input type="text" name="T2" id="t2" required /> </p>
+    <P>  <strong>3)ADDRESS: </strong><input type="text" name="T3" id="t3" required></P>
+    <P>  <strong>4)EMAIL: </strong><input type="text" name="T4" id="t4" required> </P>
+    <P>  <strong>5)SYMPTOMS:</strong></strong></P><select name="T5" REQUIRED>
+        <OPTION>cough</OPTION>
+        <OPTION>fevar</OPTION>
+        <OPTION>rashes</OPTION>
+        <OPTION>acnes</OPTION>
+        <OPTION>chest pain</OPTION>
+        <option>yellow eyes and nails</option>
+        <option>constipation</option>
+        <option>cold and shivering</option>
+        <option>stomach pain</option>
+        <option>broken/fracture bones</option>
+        <option>depression,anxiety</option>
+        <option>sore throat</option>
+        <option>running nose</option>
+        <option>headache</option>
+        <option>erection/sex problems</option>
+        <option>back pain</option>
+        <option>hair loss</option>
+        <option>diabetes</option>
+        <option>obesity</option>
+</select>
+
+
+    <H2>6)APPOINTMENT DATE:</H2>
+    <input type="date" name="T6">
+
+
+
+
+
+
+    <H2><strong>7)SLOTS:</strong></H2>
+<select name="time"  required>
+    <option>Time</option>
+    <OPTION><BUTTON>10:AM</BUTTON></OPTION>
+    <OPTION><BUTTON>11:00AM</BUTTON></OPTION>
+    <OPTION><BUTTON>12:PM</BUTTON></OPTION>
+    <OPTION><BUTTON>4:PM</BUTTON></OPTION>
+    <OPTION><BUTTON>5:PM</BUTTON></OPTION>
+    <OPTION><BUTTON>5:30PM</BUTTON></OPTION>
+    <OPTION><BUTTON>6:PM</BUTTON></OPTION>
+    <OPTION><BUTTON>7:PM</BUTTON></OPTION>
+</select>
+
+</br>
+</br>
+     <button type="submit">PAY NOW</button>
+
+</form>
+
+
+{% if ts %}
+<h2><a href="page3"> {{ts}}</a></h2>
+{% endif %}
+

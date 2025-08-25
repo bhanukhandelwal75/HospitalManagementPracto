@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhramasatra - AI Coding Helper</title>
+    <script>
+        async function sendRequest(endpoint, data) {
+            const response = await fetch(`http://localhost:5000/${endpoint}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            return response.json();
+        }
+
+        async function suggestCode() {
+            const code = document.getElementById('code').value;
+            const result = await sendRequest('suggest', { code });
+            document.getElementById('suggestion').innerText = result.suggestion;
+        }
+
+        async function debugCode() {
+            const error = document.getElementById('error').value;
+            const code = document.getElementById('code').value;
+            const result = await sendRequest('debug', { error, code });
+            document.getElementById('explanation').innerText = result.explanation;
+        }
+
+        async function improveCode() {
+            const code = document.getElementById('code').value;
+            const result = await sendRequest('improve', { code });
+            document.getElementById('improvements').innerText = result.improvements;
+        }
+    </script>
+</head>
+<body>
+    <h1>Bhramasatra - AI Coding Helper</h1>
+    <div>
+        <textarea id="code" rows="10" cols="80" placeholder="Write or paste your code here..."></textarea>
+        <br>
+        <button onclick="suggestCode()">Get Code Suggestion</button>
+        <button onclick="debugCode()">Get Debug Help</button>
+        <button onclick="improveCode()">Get Code Improvement Tips</button>
+    </div>
+    <div>
+        <h2>Suggestions:</h2>
+        <pre id="suggestion"></pre>
+        <h2>Debug Explanation:</h2>
+        <pre id="explanation"></pre>
+        <h2>Improvement Tips:</h2>
+        <pre id="improvements"></pre>
+    </div>
+</body>
+</html>

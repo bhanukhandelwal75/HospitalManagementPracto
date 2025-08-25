@@ -1,0 +1,44 @@
+<h1> list of all doctors </h1>
+
+
+<form method="post" action="editservices">
+    <p>all doctors record according to their speciality</p>
+    <p>Speciality
+    <select name="A2">
+        <option>GENERAL PHYSICIAN</option>
+        <option>cardiaologist</option>
+        <option>Orthopedic</option>
+        <option>ENT specialist</option>
+        <option>Dentist</option>
+        <OPTION>Neurologist</OPTION>
+        <OPTION>Dermatologist</OPTION>
+    </select>
+  </p>
+    <p><input type="submit" name="B1" value="show doctors"/></p>
+    </form>
+
+<hr>
+{% if d %}
+    {% for data in d %}
+<h2> <p><strong><u>Doctor name:{{data[0]}}</u></strong></p></h2>
+
+
+
+    <h3>
+        <p>1)Specialist:{{data[1]}}</p>
+    <p>2)Sittinghours:{{data[2]}}</p>
+    <p>3)Venue:{{data[3]}}</p>
+    <p>4)Days:{{data[4]}}</p>
+    <p>5)E-mail:{{data[5]}}</p>
+        <p>6)fees:{{data[6]}}</p>
+    <p>7)Experience:{{data[7]}}</p>
+
+
+    </h3>
+
+ {% endfor %}
+
+{% elif ms %}
+    <h3>{{ms}}</h3>
+{% endif %}
+

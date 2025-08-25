@@ -1,0 +1,10 @@
+<h1>welcome login page</h1>
+<form method="post" action="login">
+    <p>email:<input type="text" name="e1" id="e1"/> </p>
+    <p>password:<input type="text" name="p1" id="p1" /></p>
+    <p> <input type="submit" id="s1" name="s1" value="submit" /></p>
+</form>
+
+{% if msg %}
+    <h2>{{msg}}</h2>
+{% endif %}

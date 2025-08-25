@@ -1,0 +1,21 @@
+<h2>doctor registrations</h2>
+<form method="post" action="doctordetails">
+    <p>docname:<input type="text" name="A1" id="A1"></p>
+    <p>specialist:<input type="text" name="A2" id="A2"></p>
+    <p>sitting hours:<input type="text" name="A3" id="A3"></p>
+    <p>address<input type="text" name="A4" id="A4"></p>
+    <p>days<input type="text" name="A5" id="A5"></p>
+    <p>email<input type="text" name="A6" id="A6"></p>
+    <p style="colour:red;">fees<input type="text" name="A7" id="A7"></p>
+    <p>Experience<input type="text" name="A8" id="A8"></p>
+    <label>select image:</label>
+    <input type="file" id="A9" NAME="A9" accept="image/*" enctype="multipart/form-data">
+
+    <P><INPUT type="submit" ID="B1" NAME="B1" VALUE="register"/></p>
+</form>
+
+
+
+{% if ts %}
+<h2>{{ts}}</h2>
+{% endif %}

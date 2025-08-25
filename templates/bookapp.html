@@ -1,0 +1,41 @@
+<h1> Book Appointment Here</h1>
+<form method="post" action="bookapp">
+
+    <select name="S1" >
+                            <option>General Physicians </option>
+                            <option>Cardiologist</option>
+                            <option>Dentist</option>
+                            <option>ENT Specialist </option>
+    </select>
+    <input type="submit" id="B1" name="B1" value="Check Doctor" required>
+</form>
+
+
+{% if data %}
+     {% for d in data %}
+            <h3>
+            <p> Doctor Name :{{ d[0] }}</p></h3>
+                <p>
+
+                    Qualifications : {{ d[1] }}<br/>
+                    Setting Days : {{ d[2] }}<br/>
+                    Setting Timing : {{d[3] }}<br/>
+                    Speciality : {{d[4]}}<br/>
+                    Venue : {{d[5]}}<br/>
+                    Doctor Id : {{ d[10] }}<br>
+
+                    <form method="post" action="book">
+                        <input type="hidden" name="H1" value="{{ d[10] }}"/>
+                        <input type="submit" name="B1" value="Book Appointment"/>
+                    </form>
+
+
+
+                </p>
+
+        {% endfor %}
+
+{% elif msg %}
+    <h2> {{ msg }}</h2>
+
+{% endif %}

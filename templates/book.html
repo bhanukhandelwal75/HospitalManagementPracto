@@ -1,0 +1,57 @@
+
+{% if data %}
+ {% for d in data %}
+    <h2>
+        Doctor name : {{ d[0] }}<br>
+        Doctor Id : {{ d[10] }}<br>
+        Sitting Timing : {{ d[3] }}<br>
+        Doctor Speciality : {{ d[5] }}<br>
+        <hr>
+        <hr>
+
+          <h1> Patient booking details</h1>
+        <form action="bookap" method="post">
+
+
+
+            <P> SYMPTOMS:
+                <select name="T3" REQUIRED>
+                <OPTION>headache/cough</OPTION>
+                <OPTION>stomach pain/body shiver</OPTION>
+                <OPTION>cold/illness</OPTION>
+                <OPTION>Ear Problems</OPTION>
+                <OPTION>chest pain</OPTION>
+
+                </select></P>
+
+            <p> SLOTS:</p>
+        <select name="T4"  required>
+            <option>Time</option>
+            <OPTION><BUTTON>10:AM</BUTTON></OPTION>
+            <OPTION><BUTTON>11:00AM</BUTTON></OPTION>
+            <OPTION><BUTTON>12:PM</BUTTON></OPTION>
+            <OPTION><BUTTON>1:PM</BUTTON></OPTION>
+            <OPTION><BUTTON>2:PM</BUTTON></OPTION>
+
+        </select>
+
+
+
+            <p>Appointment date</p>
+            <input type="date" name="T5">
+
+        </BR>
+        </BR>
+             <input type="hidden" value="{{d[10]}}" name="H1" />
+            <button type="submit">Book </button>
+        </form>
+
+
+  </h2>
+ {% endfor %}
+
+{% elif msg %}
+<h2>{{ msg }} </h2>
+
+{% endif %}
+
